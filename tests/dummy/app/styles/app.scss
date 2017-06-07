@@ -1,0 +1,20 @@
+@import 'sassdash';
+
+$content: (
+  first: 'sassdash',
+  second: 'is',
+  third: (
+    nested: 'cool!'
+  )
+);
+
+.test {
+  &:before {
+    content: _join(
+      _get($content, 'first')
+      _get($content, 'second')
+      _get($content, 'third.nested'),
+      ' '
+    );
+  }
+}
