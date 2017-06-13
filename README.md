@@ -11,20 +11,24 @@ Developed with Sass toolkit developer in mind, Sassdash gives you nearly the ful
 
 ## Installation
 
-Install [Ember CLI Sass](https://github.com/aexmachina/ember-cli-sass) to ensure Sass is in use in your Ember project.
+```bash
+ember install ember-cli-sassdash
+```
 
-`ember install ember-cli-sass`
+This addon will automatically install [ember-cli-sass](https://github.com/aexmachina/ember-cli-sass) as a dependency and create an `app.scss` file in your application at `styles/app.scss` with the following import statement at the top of the file:
 
-Then install Ember CLI Sassdash.
+```sass
+@import "sassdash";
+```
 
-`ember install ember-cli-sassdash`
+Both the previously mentioned `@import` as well as the `ember-cli-sass` addon are required.
 
 ## Usage
 
-In your `app.scss`, simply add the following at the top of the file.
+This step is handled in the default blueprint, but make sure in your `app.scss` to simply add the following at the top of the file (if it isn't already included):
 
 ```sass
-@import 'sassdash';
+@import "sassdash";
 ```
 
 ## Documentation
