@@ -4,32 +4,30 @@
 const path = require('path');
 const Funnel = require('broccoli-funnel');
 const mergeTrees = require('broccoli-merge-trees');
+const BroccoliDebug = require('broccoli-debug');
 
 module.exports = {
   name: 'ember-cli-sassdash',
 
   treeForStyles(styleTree) {
+    let debugTree = BroccoliDebug.buildDebugCallback(`ember-cli-sassdash:${this.name}`);
     let trees = [];
 
+    // the /app/styles/ tree
     if (styleTree) {
-      trees.push(styleTree);
+      trees.push(debugTree(styleTree, 'styleTree'));
     }
 
-    const sassdash = moduleToFunnel('sassdash', {
+    // the complete sassdash scss source tree
+    let sassdash = moduleToFunnel('sassdash', {
       destDir: 'ember-cli-sassdash'
     });
+    trees.push(debugTree(sassdash, 'sassdash'));
 
-    trees.push(sassdash);
-
-    return mergeTrees(trees);
+    return debugTree(mergeTrees(trees), 'mergedTrees');
   }
-
 };
 
-function moduleToFunnel(moduleName, opts) {
-  return new Funnel(resolveModulePath(moduleName), opts);
-}
+let moduleToFunnel = (moduleName, opts) => new Funnel(resolveModulePath(moduleName), opts);
 
-function resolveModulePath(moduleName) {
-  return path.dirname(require.resolve(moduleName));
-}
+let resolveModulePath = (moduleName) => path.dirname(require.resolve(moduleName));
