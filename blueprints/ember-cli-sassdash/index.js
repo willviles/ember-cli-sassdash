@@ -2,6 +2,11 @@
 module.exports = {
   description: '',
 
+  normalizeEntityName() {
+    // this prevents an error when the entityName is
+    // not specified
+  },
+
   afterInstall(/*options*/) {
     return this.addPackagesToProject(
       [
