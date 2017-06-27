@@ -26,7 +26,8 @@
     "inspect": "node --inspect --debug-brk node_modules/.bin/ember s"
   },
   "dependencies": {
-    "ember-cli-babel": "^6.0.0"
+    "ember-cli-babel": "^6.0.0",
+    "sassdash": "^0.8.2"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
@@ -53,8 +54,7 @@
     "ember-resolver": "^4.0.0",
     "ember-source": "~2.13.0",
     "ember-welcome-page": "^3.0.0",
-    "loader.js": "^4.2.3",
-    "sassdash": "^0.8.2"
+    "loader.js": "^4.2.3"
   },
   "engines": {
     "node": ">= 4"
