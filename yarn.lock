@@ -6759,9 +6759,9 @@ sass-graph@^2.1.1:
     scss-tokenizer "^0.2.3"
     yargs "^7.0.0"
 
-sassdash@^0.8.2:
+"sassdash@https://github.com/davidkpiano/sassdash/archive/df4a2bb7158648f1453528c98bf137941e22c54d.tar.gz":
   version "0.8.2"
-  resolved "https://registry.yarnpkg.com/sassdash/-/sassdash-0.8.2.tgz#42d59b4932f13034695604bd8437e2b598afd368"
+  resolved "https://github.com/davidkpiano/sassdash/archive/df4a2bb7158648f1453528c98bf137941e22c54d.tar.gz#af66c3ca27953bf29d4911d47924feb9b3dfb65a"
 
 sax@^1.2.4:
   version "1.2.4"
