@@ -9,7 +9,8 @@ Ember CLI Sassdash ![Download count all time](https://img.shields.io/npm/dt/embe
 
 Developed with Sass toolkit developer in mind, Sassdash gives you nearly the full expressive power of lodash for JavaScript, inside your SCSS projects. Sassdash is a collection of utility functions, just like lodash. Sassdash never outputs any CSS declarations as it provides no mixins to do so. [Read more](https://github.com/davidkpiano/sassdash).
 
-## Installation
+Installation
+------------------------------------------------------------------------------
 
 ```bash
 ember install ember-cli-sassdash
