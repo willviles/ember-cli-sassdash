@@ -10,7 +10,7 @@ test('Sassdash is working', async function(assert) {
   let pseudoElemContent = window
     .getComputedStyle(find('.test'), ':before')
     .getPropertyValue('content')
-    .replace(/\"/g, '');
+    .replace(/"/g, '');
 
   assert.equal(pseudoElemContent, 'sassdash is cool!');
 });
