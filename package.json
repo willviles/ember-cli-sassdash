@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-sassdash",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "An Ember CLI addon for adding Sassdash to Ember.js applications.",
   "keywords": [
     "ember-addon",
